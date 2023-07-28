@@ -1,0 +1,7 @@
+@import "../globalColor.css";
+
+.dark-mode {
+  background-color: var(--darkBackground);
+  color: white;
+  transition: "0.1s";
+}

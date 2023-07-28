@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b306480c.css",
+    "main.js": "/static/js/main.9fa27ff5.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/profile.jpg": "/static/media/profile.505756809cfe6ab8e231.jpg",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/freecodecamp.jpeg": "/static/media/freecodecamp.7cd2e26b77fde9a6e711.jpeg",
+    "index.html": "/index.html",
+    "main.b306480c.css.map": "/static/css/main.b306480c.css.map",
+    "main.9fa27ff5.js.map": "/static/js/main.9fa27ff5.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b306480c.css",
+    "static/js/main.9fa27ff5.js"
+  ]
+}

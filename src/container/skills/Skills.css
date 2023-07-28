@@ -1,0 +1,60 @@
+@import "../../globalColor.css";
+
+.skills-main-div {
+  display: flex;
+  align-items: center;
+}
+
+.skills-image-div {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.skills-text-div {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.skills-heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subTitle {
+  color: var(--subTitle);
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .skills-heading {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .skills-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .greeting-text-p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .skills-main-div {
+    flex-direction: column;
+  }
+  .skills-text-div {
+    margin-left: 0px;
+    margin: 20px;
+  }
+  .skills-text {
+    font-size: 16px;
+  }
+  .skills-text-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+  .skills-image-div {
+    display: none;
+    order: 2;
+  }
+}
