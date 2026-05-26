@@ -24,4 +24,3 @@ yarn-error.log*
 
 #user generated content
 public/blogs.json
-public/profile.json

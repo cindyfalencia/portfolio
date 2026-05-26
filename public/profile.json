@@ -1,0 +1,114 @@
+{
+  "data": {
+    "user": {
+      "name": "Cindy Falencia Irawan",
+      "bio": null,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/85165122",
+      "location": "Hong Kong",
+      "pinnedItems": {
+        "totalCount": 6,
+        "edges": [
+          {
+            "node": {
+              "name": "cindyfalencia",
+              "description": "Config files for my GitHub profile.",
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "url": "https://github.com/cindyfalencia/cindyfalencia",
+              "id": "MDEwOlJlcG9zaXRvcnkzODgwNTQwMDI=",
+              "diskUsage": 4,
+              "primaryLanguage": null
+            }
+          },
+          {
+            "node": {
+              "name": "portfolio",
+              "description": "Cindy Falencia personal website",
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "url": "https://github.com/cindyfalencia/portfolio",
+              "id": "R_kgDOOLuwwA",
+              "diskUsage": 9845,
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          },
+          {
+            "node": {
+              "name": "OS-simulation",
+              "description": "OS Simulation with C",
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "url": "https://github.com/cindyfalencia/OS-simulation",
+              "id": "R_kgDOJACArQ",
+              "diskUsage": 46,
+              "primaryLanguage": {
+                "name": "C",
+                "color": "#555555"
+              }
+            }
+          },
+          {
+            "node": {
+              "name": "quad-tree-puzzle-game",
+              "description": "Quad-Tree Puzzle Game that demonstrates the application of data structures and recursion in an interactive game",
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "url": "https://github.com/cindyfalencia/quad-tree-puzzle-game",
+              "id": "R_kgDOKAq5Gg",
+              "diskUsage": 40,
+              "primaryLanguage": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          },
+          {
+            "node": {
+              "name": "caterpillar-game",
+              "description": "A simple yet entertaining Java-based game where you take control of a hungry caterpillar on a journey to collect delicious food.",
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "url": "https://github.com/cindyfalencia/caterpillar-game",
+              "id": "R_kgDOKAqqug",
+              "diskUsage": 10,
+              "primaryLanguage": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          },
+          {
+            "node": {
+              "name": "Reimagined-AI",
+              "description": "Cindy's FYP",
+              "forkCount": 2,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "url": "https://github.com/cindyfalencia/Reimagined-AI",
+              "id": "R_kgDOOOh32w",
+              "diskUsage": 5916,
+              "primaryLanguage": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
