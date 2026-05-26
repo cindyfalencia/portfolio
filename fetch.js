@@ -1,9 +1,9 @@
-fs = require("fs");
+const fs = require("fs");
 const https = require("https");
-process = require("process");
+const process = require("process");
 require("dotenv").config();
 
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const USE_GITHUB_DATA = process.env.USE_GITHUB_DATA;
 const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME;
@@ -11,21 +11,31 @@ const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME;
 const ERR = {
   noUserName:
     "Github Username was found to be undefined. Please set all relevant environment variables.",
+  noToken:
+    "Github token was found to be undefined. Please set GITHUB_TOKEN in your local environment.",
   requestFailed:
     "The request to GitHub didn't succeed. Check if GitHub token in your .env file is correct.",
   requestFailedMedium:
     "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
 };
+
 if (USE_GITHUB_DATA === "true") {
   if (GITHUB_USERNAME === undefined) {
     throw new Error(ERR.noUserName);
+  }
+  if (GITHUB_TOKEN === undefined) {
+    throw new Error(ERR.noToken);
+  }
+
+  if (!/^[a-zA-Z0-9_-]+$/.test(GITHUB_USERNAME)) {
+    throw new Error("Invalid GitHub username format.");
   }
 
   console.log(`Fetching profile data for ${GITHUB_USERNAME}`);
   var data = JSON.stringify({
     query: `
-{
-  user(login:"${GITHUB_USERNAME}") { 
+query UserProfile($login: String!) {
+  user(login: $login) {
     name
     bio
     avatarUrl
@@ -54,7 +64,10 @@ if (USE_GITHUB_DATA === "true") {
       }
     }
 }
-`
+`,
+    variables: {
+      login: GITHUB_USERNAME
+    }
   });
   const default_options = {
     hostname: "api.github.com",
@@ -63,6 +76,7 @@ if (USE_GITHUB_DATA === "true") {
     method: "POST",
     headers: {
       Authorization: `Bearer ${GITHUB_TOKEN}`,
+      "Content-Type": "application/json",
       "User-Agent": "Node"
     }
   };
@@ -94,11 +108,12 @@ if (USE_GITHUB_DATA === "true") {
   req.end();
 }
 
-if (MEDIUM_USERNAME !== undefined) {
+if (MEDIUM_USERNAME !== undefined && /^[a-zA-Z0-9_.@-]+$/.test(MEDIUM_USERNAME)) {
   console.log(`Fetching Medium blogs data for ${MEDIUM_USERNAME}`);
+  const mediumUser = encodeURIComponent(MEDIUM_USERNAME);
   const options = {
     hostname: "api.rss2json.com",
-    path: `/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USERNAME}`,
+    path: `/v1/api.json?rss_url=https://medium.com/feed/@${mediumUser}`,
     port: 443,
     method: "GET"
   };
@@ -108,7 +123,7 @@ if (MEDIUM_USERNAME !== undefined) {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestMediumFailed);
+      throw new Error(ERR.requestFailedMedium);
     }
 
     res.on("data", d => {

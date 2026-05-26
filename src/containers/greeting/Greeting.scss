@@ -58,6 +58,14 @@
   height: auto;
 }
 
+.greeting-image-div svg {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto !important;
+  margin: 0 auto;
+}
+
 .wave-emoji {
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
@@ -116,7 +124,7 @@
     display: block;
   }
   .greeting-image-div {
-    height: 256px;
+    min-height: 256px;
   }
 }
 

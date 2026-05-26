@@ -208,8 +208,28 @@ const workExperiences = {
 };
 
 const openSource = {
-  showGithubProfile: "true", 
-  display: true
+  githubUserName: "cindyfalencia",
+  showGithubProfile: "false",
+  pinnedReposLimit: 6,
+  display: true,
+  privateProjects: [
+    {
+      name: "Mandarin Anki",
+      description:
+        "A browser-based HSK 3/4 workplace Mandarin review app with flashcards, listening practice, and local progress tracking.",
+      image: require("./assets/images/projects/mandarin-anki.png"),
+      tags: ["JavaScript", "Local-first", "Language learning"],
+      status: "Private repo"
+    },
+    {
+      name: "Track My Spendings",
+      description:
+        "A mobile-first expense tracker for budgets, categories, payment methods, and monthly spending summaries.",
+      image: require("./assets/images/projects/track-my-spendings.png"),
+      tags: ["React", "TypeScript", "PWA"],
+      status: "Private repo"
+    }
+  ]
 };
 
 // Achievement Section

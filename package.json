@@ -1,5 +1,5 @@
 {
-  "homepage": "https://developerfolio.js.org/",
+  "homepage": ".",
   "name": "developerfolio",
   "version": "0.1.0",
   "private": true,
@@ -56,5 +56,11 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "dotenv": "^8.2.0",
     "prettier": "^2.3.1"
+  },
+  "overrides": {
+    "@tootallnate/once": "^3.0.1",
+    "nth-check": "^3.0.1",
+    "postcss": "^8.5.15",
+    "serialize-javascript": "^7.0.5"
   }
 }
